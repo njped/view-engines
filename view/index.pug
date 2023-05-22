@@ -1,0 +1,15 @@
+html
+  head 
+    title= myTitleFromServer 
+  body 
+    h1(class='myClass', id='myId', name='myName') This is a header
+    p.myClass.mySecondClass#mySecondId Hello #{userName}
+    ul 
+      each userName in userNames
+        //- li= 'Username: ' + user.username 
+        //- li= ' Email: ' + user.email
+        //- br
+        li
+          a(href='/users/'+userName)= userName
+    //- include date.pug
+    include form.png
